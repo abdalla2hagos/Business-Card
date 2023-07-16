@@ -1,3 +1,161 @@
-.cls-1{
-    fill: #efb02d;
+:root{
+    --clr-dark-blue: 234, 39%, 14%;
 }
+
+body{
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    background-color: rgba(122, 122, 136, 0.2);
+    font-family: 'Concert One', cursive;
+    font-family: 'DM Sans', sans-serif;
+}
+
+
+.card__front{
+    display: none;
+}
+
+.card{
+    width: 90%;
+    max-width: 30rem;
+    padding: 1rem;
+    margin: 0 auto;
+    border-radius: 0.5rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 0px 29px 0px;
+    background-color: white;
+}
+
+.logo{
+    margin-block-end: 1rem;
+    width: 8rem;
+}
+
+.info{
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    padding-block: 1rem;
+    margin-block-end: 1rem;
+}
+
+.info::before{
+    content: '';
+    position: absolute;
+    height: 0.1rem;
+    left: 5%;
+    right: 5%;
+    bottom: 0;
+    background-color: hsla(var(--clr-dark-blue), .1);
+}
+
+h1{
+    font-size: 1.5rem;
+}
+
+.contacts{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-block-end: 2rem
+}
+
+.contacts_details{
+    text-align: center;
+}
+
+.flip{
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    border: 0;
+    background-color: rgba(182, 182, 184, 0.2);
+    color: var(--clr-dark-blue);
+    border-radius: 100rem;
+    padding-inline: 0.5rem;
+    cursor: pointer;
+    font-size: 700;
+}
+
+.flip span{
+    font-weight: 500;
+}
+
+.flipWrapper{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.flexWrapper{
+    display: flex;
+    flex-direction: column;
+    margin-block-end: 2rem;
+
+}
+
+
+.details{
+    display: grid;
+    justify-content: center;
+    position: relative;
+    padding-block-end: 1rem;
+    margin-block-end: 0.5rem;
+}
+
+.details::before{
+    content: '';
+    position: absolute;
+    height: 0.1rem;
+    left: 5%;
+    right: 5%;
+    bottom: 0;
+    background-color: hsla(var(--clr-dark-blue), .1);
+}
+
+.cert{
+    display: grid;
+    justify-items: center;
+    gap: 1rem;
+}
+
+.ecraLogo{
+    width: 50%;
+}
+
+.license{
+    text-align: center;
+}
+
+
+@media(min-width: 600px){
+    .contacts{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .card{
+        width: 40rem;
+        max-width: 40rem;
+    }
+
+    .flexWrapper{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .cert{
+        display: grid;
+        justify-items: center;
+        gap: 1rem;
+        width: 15rem;
+    }
+    
+    .ecraLogo{
+        width: 100%;
+    }
+
+}
+
+
+

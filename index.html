@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/lightning.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <title>Black Stone</title>
@@ -11,7 +14,7 @@
 <body>
     <main class="card">
         <div class="card__front">
-            <img src="images/Group.svg" alt="">
+            <img class="logo" src="images/Group3.svg" alt="">
 
             <div class="info">
                 <h1>Ali Gahar</h1>
@@ -20,42 +23,58 @@
                 <p>Licensed Contractor</p>
             </div>
 
-            <div>
-                <div>
+            <div class="contacts">
+                <div class="contacts_details">
                     <img src="images/phone.svg" alt="">
                     <p>416-402-7253</p>
                 </div>
-                <div>
+                <div class="contacts_details">
                     <img src="images/location.svg" alt="">
                     <p>513-1500 Keele Street Toronto, ON</p>
                 </div>
-                <div>
+                <div class="contacts_details">
                     <img src="images/envelope.svg" alt="">
                     <p>alielectrico@gmail.com</p>
                 </div>
             </div>
+
+            <div class="flipWrapper">
+                <button class="flip">
+                    <span>Flip</span>
+                    <img src="images/arrow-right.svg" alt="">
+                </button>
+            </div>
         </div>
 
         <div class="card__back">
-            <img src="images/Group.svg" alt="">
+            <img class="logo" src="images/Group3.svg" alt="">
+
+            <div class="flexWrapper">
+                <div class="details">
+                    <p>Commercial - Industrial - Residential</p>
+                    <p>⭐New Construction Site</p>
+                    <p>⭐Nobel Tub Removal</p>
+                    <p>⭐Medical Facility</p>
+                    <p>⭐Renovation</p>
+                    <p>⭐Institution</p>
+                </div>
+
+                <div class="cert">
+                    <img class="torontoHydro" src="images/torontoHydro.svg" alt="">
+                    <img class="ecraLogo" src="images/ECRA-ESA-logo-color.png" alt="">
+                    <div class="license">
+                        <p>Ecra/esa</p>
+                        <p>Lic. No.7011450</p>
+                    </div>
+                </div>
+
+            </div>
 
             <div>
-                <div>
-                    <p>Commercial - Industrial - Residential</p>
-                    <p>New Construction Sit</p>
-                    <p>Nobel Tub Removal</p>
-                    <p>Medical Facility</p>
-                    <p>Renovation</p>
-                    <p>Institution</p>
-                </div>
-
-                <div>
-                    <img src="images/torontoHydro.svg" alt="">
-                    <img src="images/ECRA-ESA-logo-color.png" alt="">
-                    <p>Ecra/esa</p>
-                    <!-- <p>Lic. No.7011450</p> -->
-                </div>
-
+                <button class="flip">
+                    <img src="images/arrow-left.svg" alt="">
+                    <span>Flip</span>
+                </button>
             </div>
         </div>
     </main>
