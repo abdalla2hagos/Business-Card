@@ -6,28 +6,41 @@ body{
     height: 100vh;
     display: grid;
     align-items: center;
+    justify-items: center;
     background-color: rgba(122, 122, 136, 0.2);
     font-family: 'Concert One', cursive;
     font-family: 'DM Sans', sans-serif;
 }
 
-
-.card__front{
-    display: none;
-}
-
 .card{
+    display: grid;
     width: 90%;
     max-width: 30rem;
     padding: 1rem;
-    margin: 0 auto;
     border-radius: 0.5rem;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 0px 29px 0px;
     background-color: white;
+    transform-style: preserve-3d;
+    transition: all 600ms ease-in-out;
 }
 
+.card__back, .card__front{
+    backface-visibility: hidden; 
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+}
+
+.card__back{
+    transform: rotateY(180deg);
+}
+
+.card__front{
+    position: relative;
+}
+
+
 .logo{
-    margin-block-end: 1rem;
+    margin-block-end: 2rem;
     width: 8rem;
 }
 
@@ -85,6 +98,9 @@ h1{
 .flipWrapper{
     display: flex;
     justify-content: flex-end;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 
 .flexWrapper{
@@ -128,10 +144,14 @@ h1{
 }
 
 
-@media(min-width: 600px){
+@media(min-width: 650px){
     .contacts{
         flex-direction: row;
         justify-content: space-between;
+    }
+
+    .contacts > *{
+        width: 100%;
     }
 
     .card{
@@ -153,6 +173,18 @@ h1{
     
     .ecraLogo{
         width: 100%;
+    }
+
+    .details::before{
+        height: auto;
+        width: 0.1rem;
+        left: 100%;
+        top: 5%;
+        bottom: 5%;
+    }
+
+    .details{
+        padding-inline-end: 3rem;
     }
 
 }
