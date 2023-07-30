@@ -36,7 +36,6 @@ body{
 
 .card__front{
     position: relative;
-    z-index: -1;
 }
 
 
@@ -96,9 +95,7 @@ h1{
     font-weight: 500;
 }
 
-.flipWrapper{
-    display: flex;
-    justify-content: flex-end;
+.flip--front{
     position: absolute;
     bottom: 0;
     right: 0;
@@ -108,9 +105,7 @@ h1{
     display: flex;
     flex-direction: column;
     margin-block-end: 2rem;
-
 }
-
 
 .details{
     display: grid;
